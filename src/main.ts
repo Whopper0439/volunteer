@@ -2,13 +2,18 @@ import { createApp } from 'vue'
 
 //import { globalRegister } from './global'
 
+import 'normalize.css'
+import './assets/css/index.less'
+
 //import './service/axios_demo'
+
 import hyRequest from './service'
 
 import App from './App.vue'
 
 import router from './router'
 import store from './store'
+import { setupStore } from './store'
 
 const app = createApp(App)
 
@@ -22,6 +27,8 @@ app.mount('#app')
 // console.log(VUE_APP_BASE_URL)
 console.log(process.env.VUE_APP_BASE_URL)
 console.log(process.env.VUE_APP_BASE_NAME)
+
+setupStore()
 
 hyRequest.request({
   url: '/home/multidata',
