@@ -37,9 +37,7 @@
 import { defineComponent, ref } from 'vue'
 import LoginAccount from './login-account.vue'
 import LoginPhone from './login-phone.vue'
-
 import { Avatar, Iphone } from '@element-plus/icons-vue'
-
 export default defineComponent({
   components: {
     Avatar,
@@ -53,7 +51,6 @@ export default defineComponent({
     const accountRef = ref<InstanceType<typeof LoginAccount>>()
     const phoneRef = ref<InstanceType<typeof LoginPhone>>()
     const currentTab = ref('account')
-
     // 2.定义方法
     const handleLoginClick = () => {
       if (currentTab.value === 'account') {
@@ -62,7 +59,6 @@ export default defineComponent({
         console.log('phoneRef调用loginAction')
       }
     }
-
     return {
       isKeepPassword,
       accountRef,
@@ -78,17 +74,14 @@ export default defineComponent({
 .login-panel {
   margin-bottom: 150px;
   width: 320px;
-
   .title {
     text-align: center;
   }
-
   .account-control {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
   }
-
   .login-btn {
     width: 100%;
     margin-top: 10px;

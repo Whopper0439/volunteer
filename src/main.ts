@@ -25,8 +25,8 @@ app.use(store)
 app.mount('#app')
 
 // console.log(VUE_APP_BASE_URL)
-console.log(process.env.VUE_APP_BASE_URL)
-console.log(process.env.VUE_APP_BASE_NAME)
+// console.log(process.env.VUE_APP_BASE_URL)
+// console.log(process.env.VUE_APP_BASE_NAME)
 
 setupStore()
 
@@ -36,7 +36,7 @@ hyRequest.request({
   headers: {},
   interceptors: {
     requestInterceptor: (config) => {
-      console.log('单独请求的config')
+      // console.log('单独请求的config')
       if (!config.headers) {
         config.headers = {}
       }
@@ -44,7 +44,7 @@ hyRequest.request({
       return config
     },
     responseInterceptor: (res) => {
-      console.log('单独响应的response')
+      // console.log('单独响应的response')
       return res
     }
   }
@@ -66,5 +66,3 @@ hyRequest
     console.log(res.returnCode)
     console.log(res.success)
   })
-
-// hyRequest.get()
