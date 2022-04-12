@@ -1,28 +1,75 @@
-//单独对elementui 进行封装
 import { App } from 'vue'
-import 'element-plus/theme-chalk/base.css'
-
+import 'element-plus/lib/theme-chalk/base.css'
 import {
-  ElButton,
-  ElTable,
-  ElAlert,
   ElAside,
-  ElAutocomplete,
   ElAvatar,
-  ElBacktop,
-  ElBadge
+  ElButton,
+  ElCheckbox,
+  ElContainer,
+  ElDatePicker,
+  ElDropdown,
+  ElDropdownItem,
+  ElDropdownMenu,
+  ElForm,
+  ElFormItem,
+  ElHeader,
+  ElInput,
+  ElLink,
+  ElMain,
+  ElMenu,
+  ElMenuItem,
+  ElMenuItemGroup,
+  ElOption,
+  ElRadio,
+  ElRow,
+  ElCol,
+  ElSelect,
+  ElSubMenu,
+  ElTabPane,
+  ElTabs,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElTable,
+  ElTableColumn,
+  ElPagination,
+  ElImage
 } from 'element-plus'
 
 const components = [
   ElButton,
-  ElTable,
-  ElAlert,
+  ElForm,
+  ElFormItem,
+  ElInput,
+  ElRadio,
+  ElTabs,
+  ElTabPane,
+  ElCheckbox,
+  ElLink,
+  ElContainer,
+  ElHeader,
+  ElMain,
   ElAside,
-  ElAutocomplete,
+  ElMenu,
+  ElMenuItem,
+  ElMenuItemGroup,
+  ElSubMenu,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
   ElAvatar,
-  ElBacktop,
-  ElBadge
+  ElCol,
+  ElRow,
+  ElSelect,
+  ElOption,
+  ElDatePicker,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElTable,
+  ElTableColumn,
+  ElPagination,
+  ElImage
 ]
+
 export default function (app: App): void {
   for (const component of components) {
     app.component(component.name, component)
