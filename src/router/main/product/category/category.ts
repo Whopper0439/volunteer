@@ -1,4 +1,5 @@
-const category = () => import('@/views/main/product/category/CategoryManage.vue')
+const category = () =>
+  import('@/views/main/product/category/CategoryManage.vue')
 export default {
   path: '/main/product/category',
   name: 'category',

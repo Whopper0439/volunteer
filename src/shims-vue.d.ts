@@ -6,3 +6,8 @@ declare module '*.vue' {
 }
 
 declare let $store: any
+
+declare module '*.json' {
+  const value: any;
+  export default value;
+}
